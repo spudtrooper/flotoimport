@@ -25,12 +25,12 @@ go run main.go
 ```
 
 6. Upload.
-  1. cd ~/Desktop/floto
-  2. ftp jeffpalm.com / cd public_html/floto
-  3. Username: jeffpalm
-  4. Password: ********
-  5. prompt
-  6. binary
-  7. mput *
-  8. quit
+  a. cd ~/Desktop/floto
+  b. ftp jeffpalm.com / cd public_html/floto
+  c. Username: jeffpalm
+  d. Password: ********
+  e. prompt
+  f. binary
+  g. mput *
+  h. quit
 	   
