@@ -1,6 +1,6 @@
 # flotoimport
 
-This will import photos from http://instagram/spudtrooper to http://jeffpalm.com/floto in a round-about way.
+This will import photos from [instagram.com/spudtrooper](http://instagram.com/spudtrooper) to [jeffpalm.com/floto](http://jeffpalm.com/floto) in a round-about way.
 
 [floto](http://jeffpalm.com/floto) started as a J2ME app in 2006 that uploaded photos directly to this server starting with [this photo](https://jeffpalm.com/floto/20060602141910.jpg), then uploaded photos by attaching to an email, then from instagram as of [this photo](https://jeffpalm.com/floto/20131226024955.jpg), now via instagram, but not directly since they don't support that API anymore. Along the way it would also send photos to dropbox and other cloud places, but it doesn't anymore.
 
