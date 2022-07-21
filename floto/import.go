@@ -125,24 +125,24 @@ func (i *importer) ImportImage(outDir, infile, description, location string) err
 	log.Printf("Using base dir  : %s", baseDir)
 	log.Printf("Using sec       : %s", sec)
 	outFile := path.Join(baseDir, sec+".jpg")
-	out_description := path.Join(baseDir, sec+".des")
-	out_location := path.Join(baseDir, sec+".loc")
-	outFile_med := path.Join(baseDir, sec+"-med.jpg")
+	outDescr := path.Join(baseDir, sec+".des")
+	outLoc := path.Join(baseDir, sec+".loc")
+	outFileMed := path.Join(baseDir, sec+"-med.jpg")
 	var width uint = 150
 	var height uint = 150
-	width_med := width * 4
-	height_med := height * 4
+	widthMed := width * 4
+	heightMed := height * 4
 	if err := resizeImage(infile, outFile, width, height); err != nil {
 		return err
 	}
-	if err := resizeImage(infile, outFile_med, width_med, height_med); err != nil {
+	if err := resizeImage(infile, outFileMed, widthMed, heightMed); err != nil {
 		return err
 	}
 
-	if err := writeFile(out_description, description); err != nil {
+	if err := writeFile(outDescr, description); err != nil {
 		return err
 	}
-	if err := writeFile(out_location, location); err != nil {
+	if err := writeFile(outLoc, location); err != nil {
 		return err
 	}
 
