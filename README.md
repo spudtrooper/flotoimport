@@ -27,8 +27,6 @@ go run main.go
 6. Upload.
    1. cd ~/Desktop/floto
    1. sftp jeffpalm.com / cd public_html/floto
-   1. Username: jeffpalm
-   1. Password: ********
    1. prompt
    1. binary
    1. mput *
