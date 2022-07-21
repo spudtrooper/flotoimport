@@ -11,7 +11,7 @@ Caveat (a pretty big one): This won't do anything for anyone else but me.
 Pre:
 
 ```bash
-mkdir - ~/Desktop/raw
+mkdir -p ~/Desktop/raw
 ```
 
 1. Navigate to http://instagram.com/spudtrooper
