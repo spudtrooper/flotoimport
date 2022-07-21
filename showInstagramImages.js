@@ -1,9 +1,5 @@
 /**
  * Shows the various sized images for an instagram image.
- *
- * Usage:
- *   1. Click on an instagram thumbnail.
- *   2. Run this.
  */
 (function () {
   let imgs = [];
