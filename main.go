@@ -11,8 +11,8 @@ import (
 )
 
 var (
-	dir    = flag.String("dir", "", "The input directory")
-	outdir = flag.String("outdir", "", "Output dir")
+	dir    = flag.String("dir", "~/Desktop/raw", "The input directory")
+	outdir = flag.String("outdir", "~/Desktop/floto", "Output dir")
 )
 
 func realMain() error {

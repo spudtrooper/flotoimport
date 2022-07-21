@@ -21,7 +21,7 @@ mkdir - ~/Desktop/raw
 5. Import all images by running the following from this directory:
 
 ```bash
-go run main.go --dir ~/Desktop/raw
+go run main.go
 ```
 
 6. Upload.
