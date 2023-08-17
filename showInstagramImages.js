@@ -3,7 +3,7 @@
  */
 (function () {
   let imgs = [];
-  document.querySelectorAll('img[class="_aagt"]').forEach(function (el) {
+  document.querySelectorAll('img[style="object-fit: cover;"]').forEach(function (el) {
     const alt = el.getAttribute('alt');
     console.log(alt);
     let srcset = el.getAttribute('srcset');

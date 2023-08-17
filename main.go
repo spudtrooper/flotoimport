@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"log"
+	"os"
 	"path"
 	"path/filepath"
 
@@ -11,21 +12,36 @@ import (
 )
 
 var (
-	dir    = flag.String("dir", "~/Desktop/raw", "The input directory")
-	outdir = flag.String("outdir", "~/Desktop/floto", "Output dir")
+	dir    = flag.String("dir", "", "The input directory, defaults to ~/Desktop/raw")
+	outdir = flag.String("outdir", "", "Output dir, defaults to ~/Desktop/floto")
 )
 
 func realMain() error {
-	if *dir == "" {
-		return errors.Errorf("--dir required")
+	dir := *dir
+	outdir := *outdir
+	if dir == "" || outdir == "" {
+		home, err := os.UserHomeDir()
+		if err != nil {
+			return errors.Errorf("getting home dir: %v", err)
+		}
+		log.Printf("home: %v", home)
+		if dir == "" {
+			dir = path.Join(home, "Desktop", "raw")
+		}
+		if outdir == "" {
+			outdir = path.Join(home, "Desktop", "floto")
+		}
 	}
-	fs, err := filepath.Glob(path.Join(*dir, "*.jpg"))
+
+	fs, err := filepath.Glob(path.Join(dir, "*.jpg"))
 	if err != nil {
 		return err
 	}
+
 	imprt := floto.MakeImporter()
 	for _, f := range fs {
-		if err := imprt.ImportImage(*outdir, f, "", ""); err != nil {
+		log.Printf("f:%v", f)
+		if err := imprt.ImportImage(outdir, f, "", ""); err != nil {
 			return err
 		}
 	}
