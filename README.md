@@ -26,9 +26,5 @@ go run main.go
 
 6. Upload.
    1. cd ~/Desktop/floto
-   1. sftp jeffpalm.com / cd public_html/floto
-   1. prompt
-   1. binary
-   1. mput *
-   1. quit
+   1. Send files...
 	   
